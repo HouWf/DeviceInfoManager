@@ -232,6 +232,7 @@
 
 /// 获取电池电量
 + (CGFloat)getBatteryLevel {
+    [UIDevice currentDevice].batteryMonitoringEnabled = YES;
     return [UIDevice currentDevice].batteryLevel;
 }
 
